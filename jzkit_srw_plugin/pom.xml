@@ -26,7 +26,7 @@
                 <echo>Running WSDL Compliation - output to ${project.build.directory}/generated/main/java</echo>
                 <mkdir dir="${project.build.directory}/generated/main/java" />
                 <taskdef classpathref="maven.compile.classpath" resource="axis-tasks.properties" />
-                <axis-wsdl2java debug="false" serverside="true" skeletondeploy="false" typemappingversion="1.3" wrapArrays="true" output="${project.build.directory}/generated/main/java" verbose="true" url="http://developer.k-int.com/srw1-1/srw-bindings.wsdl">
+                <axis-wsdl2java debug="false" serverside="true" skeletondeploy="false" typemappingversion="1.3" wrapArrays="true" output="${project.build.directory}/generated/main/java" verbose="true" url="file://${project.build.directory}/../srw-bindings.wsdl">  <!--url="http://developer.k-int.com/srw1-1/srw-bindings.wsdl"-->
                   <mapping namespace="http://www.loc.gov/zing/srw/" package="org.jzkit.search.provider.zing" />
                   <mapping namespace="http://www.loc.gov/zing/srw/interfaces/" package="org.jzkit.search.provider.zing.interfaces" />
                   <mapping namespace="http://www.loc.gov/zing/srw/srw-bindings/" package="org.jzkit.search.provider.zing.srw.bindings" />
