@@ -23,4 +23,4 @@ mvn --no-tests clean install
 Not recommended if you are doing development. If you just need to use the jzkit jars, they can
 be referenced in-place in the k-int maven2 repository at 
 
-http://developer.k-int.com/maven2
+mvn -Dmaven.test.skip=true clean install
